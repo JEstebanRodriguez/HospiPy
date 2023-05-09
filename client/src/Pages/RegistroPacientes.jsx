@@ -23,7 +23,7 @@ const RegistroPaciente = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/pacientes', datosPaciente);
+      const response = await axios.post('http://localhost:5000/pacientes', datosPaciente);
       alert(response.data.mensaje);
     } catch (error) {
       console.log(error);

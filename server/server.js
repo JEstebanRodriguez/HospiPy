@@ -27,7 +27,7 @@ const pacientesRouter = require('./routes/pacientes');
 app.use('/pacientes', pacientesRouter);
 
 // Iniciar el servidor
-const PORT = 8000;
+const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Servidor iniciado en el puerto ${PORT}`);
 })
