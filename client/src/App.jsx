@@ -1,11 +1,11 @@
 import './App.css'
-import RegistroPaciente from './Pages/RegistroPacientes'
+import RegistroPacientes from './Pages/RegistroPacientes'
 
 function App() {
 
   return (
     <>
-      <RegistroPaciente/>
+      <RegistroPacientes/>
     </>
   )
 }
