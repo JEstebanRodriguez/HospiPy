@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
 
-
 const RegistroPaciente = () => {
   const [datosPaciente, setDatosPaciente] = useState({
     nombre: '',

@@ -1,63 +1,65 @@
-const Paciente = require('../models/paciente')
+import { Paciente } from '../models/paciente.js';
 
-exports.obtenerPacientes = async (req, res) => {
+export const obtenerPacientes = async (req, res) => {
   try {
-    const pacientes = await Paciente.find()
-    res.json(pacientes)
+    const pacientes = await Paciente.find();
+    res.json(pacientes);
   } catch (error) {
-    console.log(error)
-    res.status(500).json({ mensaje: 'Error al obtener los pacientes' })
+    console.error(error);
+    res.status(500).json({ mensaje: 'Error al obtener los pacientes' });
   }
-}
+};
 
-exports.crearPaciente = async (req, res) => {
+export const crearPaciente = async (req, res) => {
   try {
-    const paciente = new Paciente(req.body)
-    await paciente.save()
-    res.json({ mensaje: 'Paciente creado exitosamente', paciente })
+    const paciente = new Paciente(req.body);
+    await paciente.save();
+    res.json({ mensaje: 'Paciente creado exitosamente', paciente });
   } catch (error) {
-    console.log(error)
-    res.status(500).json({ mensaje: 'Error al crear el paciente' })
+    console.error(error);
+    res.status(500).json({ mensaje: 'Error al crear el paciente' });
   }
-}
+};
 
-exports.obtenerPaciente = async (req, res) => {
+export const obtenerPaciente = async (req, res) => {
   try {
-    const paciente = await Paciente.findById(req.params.id)
+    const paciente = await Paciente.findById(req.params.id);
     if (!paciente) {
-      return res.status(404).json({ mensaje: 'Paciente no encontrado' })
+      return res.status(404).json({ mensaje: 'Paciente no encontrado' });
     }
-    res.json(paciente)
+    res.json(paciente);
   } catch (error) {
-    console.log(error)
-    res.status(500).json({ mensaje: 'Error al obtener el paciente' })
+    console.error(error);
+    res.status(500).json({ mensaje: 'Error al obtener el paciente' });
   }
-}
+};
 
-exports.actualizarPaciente = async (req, res) => {
+export const actualizarPaciente = async (req, res) => {
   try {
-    const paciente = await Paciente.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
-    })
+    const paciente = await Paciente.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
     if (!paciente) {
-      return res.status(404).json({ mensaje: 'Paciente no encontrado' })
+      return res.status(404).json({ mensaje: 'Paciente no encontrado' });
     }
-    res.json({ mensaje: 'Paciente actualizado exitosamente', paciente })
+    res.json({ mensaje: 'Paciente actualizado exitosamente', paciente });
   } catch (error) {
-    console.log(error)
-    res.status(500).json({ mensaje: 'Error al actualizar el paciente' })
+    console.error(error);
+    res.status(500).json({ mensaje: 'Error al actualizar el paciente' });
   }
-}
+};
 
-exports.eliminarPaciente = async (req, res) => {
+export const eliminarPaciente = async (req, res) => {
   try {
-    const paciente = await Paciente.findByIdAndDelete(req.params.id)
+    const paciente = await Paciente.findByIdAndDelete(req.params.id);
     if (!paciente) {
-      return res.status(404).json({ mensaje: 'Paciente no encontrado' })
+      return res.status(404).json({ mensaje: 'Paciente no encontrado' });
     }
-    res.json({ mensaje: 'Paciente eliminado exitosamente', paciente })
+    res.json({ mensaje: 'Paciente eliminado exitosamente', paciente });
   } catch (error) {
-    console.log(error)
-    res.status(500).json({ mensaje: 'Error al eliminar el paciente' })
+    console.error(error);
+    res.status(500).json({ mensaje: 'Error al eliminar el paciente' });
   }
-}
+};

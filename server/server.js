@@ -1,6 +1,6 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
 
 const app = express();
 
@@ -23,11 +23,11 @@ mongoose.connection.on('error', (error) => {
 });
 
 // Rutas
-const pacientesRouter = require('./routes/pacientes');
+import pacientesRouter from './routes/pacientes.js';
 app.use('/pacientes', pacientesRouter);
 
 // Iniciar el servidor
 const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Servidor iniciado en el puerto ${PORT}`);
-})
+});
