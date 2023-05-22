@@ -1,12 +1,12 @@
+import RegistroPaciente from '../pages/RegistroPacientes'
 import './App.css'
-import RegistroPacientes from './Pages/RegistroPacientes'
 
 
 
 function App() {
   return (
     <>
-      <RegistroPacientes />
+      <RegistroPaciente />
     </>
   )
 }
