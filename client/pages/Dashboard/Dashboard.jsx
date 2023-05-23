@@ -7,7 +7,7 @@ export const Dashboard = () => {
         <section className='w-full relative h-[100vh] bg-white'>
             <Header />
             <Waves dir='wv__down' firstColor='fill-primary' secondColor='fill-slate-200' />
-            <Waves dir='wv__up' firstColor='fill-slate-200'/>
+            <Waves dir='wv__up' firstColor='fill-slate-200' />
         </section>
     )
 }

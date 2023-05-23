@@ -12,5 +12,3 @@ export const Waves = ({ dir, firstColor, secondColor }) => {
         </>
     )
 }
-
-
