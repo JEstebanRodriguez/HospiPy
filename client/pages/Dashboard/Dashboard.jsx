@@ -4,10 +4,10 @@ import { Waves } from '../../components/Waves/Waves'
 
 export const Dashboard = () => {
     return (
-        <section className='max-w-[100%] relative h-[100vh] bg-white'>
-            <Header/>
-            <Waves dir='wv__abajo'/>
-            <Waves dir='wv__arriba'/>
+        <section className='w-full relative h-[100vh] bg-white'>
+            <Header />
+            <Waves dir='wv__down' firstColor='fill-primary' secondColor='fill-slate-200' />
+            <Waves dir='wv__up' firstColor='fill-slate-200'/>
         </section>
     )
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from '../Buttons/Button'
 
 export const Header = () => {
     return (
@@ -8,13 +9,7 @@ export const Header = () => {
                     Logo-Hospital
                 </h1>
             </div>
-            {/* <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul> */}
-            <button className='border-2 border-solid p-4 font-bold bg-blue-700 text-white hover:cursor-pointer hover:bg-blue-900'>Iniciar Sesion</button>
+            <Button text='Iniciar Sesion' />
         </nav>
     )
 }
