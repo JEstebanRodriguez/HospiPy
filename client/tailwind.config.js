@@ -1,19 +1,21 @@
 // @type {import('tailwindcss').Config}
 export default {
   content: [
-    './*.{html,jsx,js}',
-    './pages/**/*.{html,jsx}',
-    './components/**/*.{html.jsx}',
-    './index.html',
-    './src/**/*.{js,ts,jsx,tsx}',
+    './**/*.jsx',
   ],
   theme: {
-    screens:{
-      'sm': {'max': '576px'},
+    screens: {
+      'sm': { 'max': '576px' },
+      'md': {'min': '577px', 'max': '960px'}
     },
-    fontFamily:{
+    fontFamily: {
     },
     extend: {
+      colors: {
+        primary: '#14B8A6', //verde claro
+        secondary: '#13505B', //verde oscuro
+        white: '#F3F3F3' //variante de blanco
+      }
     },
   },
   plugins: [],
