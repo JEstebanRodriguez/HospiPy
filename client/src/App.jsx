@@ -1,3 +1,4 @@
+import { Dashboard } from '../pages/Dashboard/Dashboard'
 import RegistroPaciente from '../pages/RegistroPacientes'
 import './App.css'
 
@@ -6,7 +7,8 @@ import './App.css'
 function App() {
   return (
     <>
-      <RegistroPaciente />
+      <Dashboard />
+      {/* <RegistroPaciente /> */}
     </>
   )
 }
