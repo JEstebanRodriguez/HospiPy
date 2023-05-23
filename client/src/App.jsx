@@ -1,12 +1,12 @@
-import RegistroPaciente from '../pages/RegistroPacientes'
-import './App.css'
 
+import './App.css'
+import Tabs from '../pages/Tabs'
 
 
 function App() {
   return (
     <>
-      <RegistroPaciente />
+      <Tabs/>
     </>
   )
 }
